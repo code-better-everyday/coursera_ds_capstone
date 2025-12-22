@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="SpaceX Data Collection Flowchart" id="Flowchart1">
+    <mxGraphModel dx="1139" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Start -->
+        <mxCell id="start" value="Start: Predict Falcon 9 Landing Success" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="160" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Step 1 -->
+        <mxCell id="step1" value="Collect Historical Launch Data (SpaceX API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Decision 1 -->
+        <mxCell id="decision1" value="Is Data Complete/Filtered?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="160" y="220" width="140" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Step 2 -->
+        <mxCell id="step2" value="Filter & Clean Launch Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="340" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Step 3 -->
+        <mxCell id="step3" value="Enrich Data With Metadata (API)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="460" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Step 4 -->
+        <mxCell id="step4" value="Prepare Final Dataset for Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="120" y="580" width="220" height="80" as="geometry"/>
+        </mxCell>
+        <!-- End -->
+        <mxCell id="end" value="End: Ready-to-Use Dataframe" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="160" y="700" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Edges -->
+        <mxCell id="edge1" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxPoint as="sourcePoint" x="230" y="100"/>
+          <mxPoint as="targetPoint" x="230" y="120"/>
+          <mxCell source="start" target="step1"/>
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="step1" target="decision1"/>
+        </mxCell>
+        <mxCell id="yes" value="Yes" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="decision1" target="step2"/>
+        </mxCell>
+        <mxCell id="no" value="No" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="decision1" target="step1"/>
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="step2" target="step3"/>
+        </mxCell>
+        <mxCell id="edge5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="step3" target="step4"/>
+        </mxCell>
+        <mxCell id="edge6" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;rounded=0;strokeColor=#6c6c6c;">
+          <mxGeometry relative="1" as="geometry"/>
+          <mxCell source="step4" target="end"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

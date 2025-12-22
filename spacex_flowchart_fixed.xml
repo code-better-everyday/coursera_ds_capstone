@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Flowchart">
+    <mxGraphModel dx="1249" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <!-- Start -->
+        <mxCell id="2" value="Start: Predict Falcon 9 Landing Success" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Collect Data -->
+        <mxCell id="3" value="1. Collect Historical Launch Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="140" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Decision: Data Quality -->
+        <mxCell id="4" value="Is Data Complete/Filtered?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="300" y="260" width="160" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Filter Data -->
+        <mxCell id="5" value="2. Filter & Clean Launch Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="380" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Enrich Data -->
+        <mxCell id="6" value="3. Enrich Data Using SpaceX API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="500" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Finalized Dataset -->
+        <mxCell id="7" value="4. Prepare Final Dataset for Analysis" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="240" y="620" width="280" height="80" as="geometry"/>
+        </mxCell>
+        <!-- End -->
+        <mxCell id="8" value="End: Ready-to-Use Dataframe" style="ellipse
